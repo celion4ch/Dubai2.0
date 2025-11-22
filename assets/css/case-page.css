@@ -1,0 +1,634 @@
+*{
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+.case_page{
+
+    margin-bottom:150px;
+
+}
+
+/* Скрываем все табы по умолчанию */
+
+/* По умолчанию все отзывы скрыты */
+
+/* .case-video_wrapper,
+
+.case-text_wrapper {
+
+    display: none;
+
+}
+
+
+
+
+
+/* Можно добавить стили для активного состояния табов */
+
+.case_tab label {
+
+    color: var(--White-100, #F6F6F6);
+
+    font-family: Stapel;
+
+    font-size: 16px;
+
+    cursor: url(../img/pointer.svg),pointer;
+
+    font-style: normal;
+
+    font-weight: 500;
+
+    line-height: 130%;
+
+    display: flex;
+
+    padding: 10px 24px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 35px;
+
+    outline: 1px solid var(--White-100, #F6F6F6);
+
+    white-space: nowrap;
+
+}
+
+
+
+.case_tab input:checked ~ label{
+
+    color: var(--Bg-Black, #0C0C0C);
+
+    background: var(--White-100, #F6F6F6);
+
+}
+
+.case_tab input{
+
+    display: none;
+
+}
+
+.case_tab label:hover {
+
+    color: var(--Bg-Black, #0C0C0C);
+
+    background: var(--White-100, #F6F6F6);
+
+}
+
+.tabs,form.case_tabs{
+
+    display:flex;
+
+    align-items: center;
+
+    gap:16px;
+
+    padding:0;
+
+    margin-top: 72px;
+
+    padding: 5px 2px;
+
+    overflow-x: auto;
+
+}
+
+.case_page h1{
+
+    font-family: Stapel;
+
+    font-size: 64px;
+
+    font-style: normal;
+
+    font-weight: 500;
+
+    line-height: normal;
+
+    background: var(--Gradient-Red, linear-gradient(265deg, #E21D1D -8.12%, #F2F2F2 107.89%));
+
+    background-clip: text;
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+}
+
+p{
+
+    font-family: Stapel;
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 20.8px;
+
+    color: #F6F6F6;
+
+}
+
+
+
+.case_gallery_wrapper{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:32px;
+
+    row-gap: 56px;
+
+    margin-top: 56px;
+
+}
+
+.single_case_wrapper{
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #252525;
+
+    border-radius: 24px;
+
+    position: relative;
+
+    margin: 1px;
+
+    padding-bottom: 1px;
+
+    cursor:url(../img/pointer.svg),pointer;
+
+}
+
+.single_case_wrapper::before{
+
+    opacity: 0;
+
+    content: '';
+
+    background-image: linear-gradient(265.35deg, #E21D1D -8.12%, #F2F2F2 107.89%);
+
+    top: 0;
+
+    left: 0;
+
+    bottom: 0;
+
+    right: 0;
+
+    border-radius: 24px;
+
+    position: absolute;
+
+    margin: -1px;
+
+    z-index: -1;
+
+    transition: .3s;
+
+}
+
+.single_case_wrapper:hover::before{
+
+    opacity: 1;
+
+    transition: .3s;
+
+}
+
+.case_photo{
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+}
+
+.case_photo img{
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+.case_description{
+
+    padding: 40px 32px;
+
+}
+
+.case_stat{
+
+    display: flex;
+
+    gap: 72px;
+
+}
+
+.case_department{
+
+    display: inline-block;
+
+    padding: 10px 24px 10px 24px;
+
+    border-radius: 35px;
+
+    border: 1px solid #F6F6F666;
+
+    color: #B1AAAA;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    line-height: 20.24px;
+
+}
+
+.case_desc{
+
+    margin-top: 16px;
+
+    margin-bottom: 30px;
+
+    font-weight: 500;
+
+    font-size: 20px;
+
+    line-height: 26px;
+
+}
+
+.red_text{
+
+    margin-top: 6px;
+
+    color: #C72626;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    line-height: 26px;
+
+}
+
+.stat_item{
+
+    font-size: 16px;
+
+    font-weight: 400;
+
+    line-height: 20.24px;
+
+    color: #F6F6F6;
+
+}
+
+
+
+.btn-more.btn-dark-red{
+
+    display: flex;
+
+    width: auto !important;
+
+    margin-top: 32px;
+
+}
+
+.pagination{
+
+    display: flex !important;
+
+    list-style: none;
+
+    align-items: center;
+
+    gap: 20px;
+    
+    justify-content:flex-end;
+
+}
+
+.pagination li:first-child{
+
+    display: none;
+
+}
+
+.pagination li:last-child{
+
+    display: none;
+
+}
+
+.pagination a{
+
+    text-decoration: none;
+
+}
+
+.pagination__arrow{
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--White-10, rgba(246, 246, 246, 0.10));
+
+    line-height: 1px;
+
+}
+
+.pagination__arrow{
+
+    color:#F7F7F7;
+
+}
+
+.pagination__disabled{
+
+    color: #151515;
+
+    opacity: .6;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--White-10, rgba(246, 246, 246, 0.10));
+
+    line-height: 1px;
+
+}
+
+.page-link{
+
+    color: var(--Light-Grey, #B1AAAA);
+
+    /* Body/Medium */
+
+    font-family: Stapel;
+
+    font-size: 16px;
+
+    font-style: normal;
+
+    font-weight: 500;
+
+    line-height: normal;
+
+}
+
+.pagination__currentPage{
+
+    color: var(--Red-100, #C72626);
+
+    /* Body/Medium */
+
+    font-family: Stapel;
+
+    font-size: 16px;
+
+    font-style: normal;
+
+    font-weight: 500;
+
+    line-height: normal;
+
+}
+
+.pagination_wrapp{
+
+    display: flex;
+
+    justify-content: flex-end;
+
+}
+
+
+
+
+
+.case-read-more{
+
+    color: #C72626;
+
+    font-family: Stapel;
+
+    font-size: 16px;
+
+    font-weight: 500;
+
+    line-height: 20.24px;
+
+    text-decoration: none;
+
+    
+
+}
+
+.case_gallery_wrapper > a{
+
+    text-decoration: none;
+
+}
+
+@media (max-width:1600px) and (min-width:1200px) {
+    .case_stat{
+        gap: 20px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width:1200px) {
+
+    .cases_gallery_wrapper{
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .cases_gallery_wrapper.text-content{
+
+        grid-template-columns: 1fr 1fr;
+
+    }   
+
+    .cases_links_maps{
+
+        flex-direction: column;
+
+    }
+
+    .maps_links_btn{
+
+        padding: 50px 0;
+
+    }
+
+    .maps_arrow{
+
+        width: 32px;
+
+        height: 32px;
+
+    }
+
+    .maps_arrow:before{
+
+        width: 32px;
+
+        height: 32px;
+
+        background-size: cover;
+
+    }
+
+    .maps_links_btn:hover .maps_arrow:before{
+
+        transform: translate(7px, -8px);
+
+    }
+
+    .cases_links_maps{
+
+        margin-top: 100px;
+
+    }
+
+    .modal-content-case{
+
+        width: 100%;
+
+    }
+
+    .case_gallery_wrapper{
+
+        grid-template-columns: 1fr;
+
+    }
+
+    
+
+}
+
+@media (max-width:768px) {
+
+    .cases_gallery_wrapper.text-content{
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .container{
+
+        width: calc(100% - 30px);
+
+    }
+
+    .maps_links_btn{
+
+        padding: 40px 0;
+
+    }
+
+    .maps_links_btn .maps_arrow{
+
+        right: 25px;
+
+        top: 22px;
+
+    }
+
+    .cases_links_maps{
+
+        margin-top: 80px;
+
+    }
+
+    .case_part{
+
+        width: 100%;
+
+        margin: 0;
+
+    }
+
+    .video_part{
+
+        width: 100%;
+
+        top: -100px;
+
+        display: flex;
+
+    }
+
+    .case-video_wrapper{
+
+        margin-top: 140px;
+
+    }
+
+    .video_wrapper{
+
+        width: 40vw;
+
+    }
+
+    .case_stat{
+
+        flex-direction: column;
+
+        gap: 16px;
+
+    }
+
+    .case_description{
+
+        padding: 24px 20px;
+
+    }
+
+}
